@@ -29,9 +29,12 @@ Vagrant.configure("2") do |config|
     sudo yum -y install curl
     sudo yum -y install wget
     # It is an old GIT version, see to update it
-    sudo yu, -y install git
     sudo yum -y install zip
     sudo yum -y install unzip
+
+    # GIT (CentOS comes with an old version)
+    sudo yum -y install  https://centos7.iuscommunity.org/ius-release.rpm
+    sudo yum -y install  git2u-all
 
     # install java
     curl -O https://download.java.net/java/GA/jdk11/9/GPL/openjdk-11.0.2_linux-x64_bin.tar.gz
